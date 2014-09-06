@@ -1,29 +1,29 @@
 # VagrantPowder
 
-TODO: Write a gem description
+A [Vagrant](http://www.vagrantup.com/) plugin to help with
+[POW](http://pow.cx/) using the
+[Powder Gem](https://github.com/Rodreegez/powder).
+
+## Requirements
+
+* Vagrant version 1.2.0 or greater.
+* OSX
+* [pow](http://pow.cx/)
 
 ## Installation
 
-Add this line to your application's Gemfile:
+TODO: distribute to plugin repo so the following works
 
-    gem 'vagrant-powder'
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install vagrant-powder
+``` bash
+vagrant plugin install vagrant-powder
+```
 
 ## Usage
 
-TODO: Write usage instructions here
+Vagrant will automatically run `powder down`
+after any `vagrant up` step.
 
-## Contributing
-
-1. Fork it ( https://github.com/[my-github-username]/vagrant-powder/fork )
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create a new Pull Request
+You can also manually run
+``` bash
+vagrant powder-down
+```
