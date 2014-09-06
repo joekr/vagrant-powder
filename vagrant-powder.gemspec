@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["joe.kratzat@gmail.com"]
   spec.summary       = %q{Allows vagrant to handle the powder gem}
   spec.description   = %q{Makes sure that pow isn't running when you vagrant up}
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/joekr/vagrant-powder"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
@@ -19,7 +19,7 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   spec.add_development_dependency "bundler", "~> 1.6"
-  spec.add_development_dependency "rake"
+  spec.add_development_dependency "rake", '~> 10.1', '>= 10.1.1'
 
-  spec.add_runtime_dependency "powder"
+  spec.add_runtime_dependency "powder", '~> 0.2', '>= 0.2.1'
 end
