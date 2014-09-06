@@ -12,8 +12,6 @@ A [Vagrant](http://www.vagrantup.com/) plugin to help with
 
 ## Installation
 
-TODO: distribute to plugin repo so the following works
-
 ``` bash
 vagrant plugin install vagrant-powder
 ```
