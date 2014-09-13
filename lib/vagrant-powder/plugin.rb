@@ -23,16 +23,15 @@ module VagrantPlugins
         hook.prepend(Action)
       end
 
-      # TODO: Handle powder up on halt and destroy
-      # action_hook("Powder_hook", :machine_action_halt) do |hook|
-      #   require_relative "action"
-      #   hook.prepend(Action)
-      # end
-      #
-      # action_hook("Powder_hook", :machine_action_destroy) do |hook|
-      #   require_relative "action"
-      #   hook.prepend(Action)
-      # end
+      action_hook("Powder_hook", :machine_action_halt) do |hook|
+        require_relative "action"
+        hook.prepend(Action)
+      end
+
+      action_hook("Powder_hook", :machine_action_destroy) do |hook|
+        require_relative "action"
+        hook.prepend(Action)
+      end
 
     end
 

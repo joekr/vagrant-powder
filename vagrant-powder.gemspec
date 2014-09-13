@@ -9,7 +9,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Joe Kratzat"]
   spec.email         = ["joe.kratzat@gmail.com"]
   spec.summary       = %q{Allows vagrant to handle the powder gem}
-  spec.description   = %q{Makes sure that pow isn't running when you vagrant up}
+  spec.description   = %q{Unlinks the current project in pow when you vagrant up.
+    Then relinks on vagrant halt or destroy.}
   spec.homepage      = "https://github.com/joekr/vagrant-powder"
   spec.license       = "MIT"
 

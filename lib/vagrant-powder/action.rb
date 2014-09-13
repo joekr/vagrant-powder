@@ -24,8 +24,14 @@ module VagrantPlugins
 
         case action
         when :up
-          puts "Powder down"
-          `powder down`
+          puts "Powder unlink"
+          `powder unlink`
+        when :halt
+          puts "Powder link"
+          `powder link`
+        when :destroy
+          puts "powder link"
+          `powder link`
         end
       end
 
