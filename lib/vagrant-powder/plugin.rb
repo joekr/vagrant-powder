@@ -18,6 +18,11 @@ module VagrantPlugins
         Command
       end
 
+      config "powder" do
+        require_relative "config"
+        Config
+      end
+
       action_hook("Powder_hook", :machine_action_up) do |hook|
         require_relative "action"
         hook.prepend(Action)

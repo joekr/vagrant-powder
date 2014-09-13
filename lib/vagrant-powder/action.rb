@@ -11,6 +11,7 @@ module VagrantPlugins
       end
 
       def call(env)
+
         # Before machine action
         state  = env[:machine].state.id
 
@@ -18,20 +19,24 @@ module VagrantPlugins
         @app.call(env)
 
         # After execute machine action
-        config    = env[:machine].config.Pushbullet
+        config    = env[:machine].config.powder
         action    = env[:machine_action]
         provision = env[:provision_enabled]
 
-        case action
-        when :up
-          puts "Powder unlink"
-          `powder unlink`
-        when :halt
-          puts "Powder link"
-          `powder link`
-        when :destroy
-          puts "powder link"
-          `powder link`
+        if config.enabled
+
+          case action
+          when :up
+            puts "Powder unlink #{config.link_name}"
+            `powder unlink #{config.link_name}`
+          when :halt
+            puts "Powder link #{config.link_name}"
+            `powder link #{config.link_name}`
+          when :destroy
+            puts "powder link #{config.link_name}"
+            `powder link #{config.link_name}`
+          end
+
         end
       end
 
