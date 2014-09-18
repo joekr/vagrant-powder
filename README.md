@@ -18,8 +18,8 @@ vagrant plugin install vagrant-powder
 
 ## Usage
 
-Vagrant will automatically run `powder down`
-after any `vagrant up` step.
+Vagrant will automatically run `powder unlink`
+after `vagrant up`, and `powder link` on halt or destroy.
 
 ### Vagrantfile
 
